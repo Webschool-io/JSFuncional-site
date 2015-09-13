@@ -1,0 +1,192 @@
+@import url(https://fonts.googleapis.com/css?family=Amatic\+SC:400,700);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+
+body
+  font-family 'Lato', sans-serif
+
+section
+  center(1200px)
+  padding rem(60px) rem(15px)
+
+h1
+  font-family 'Amatic SC', cursive
+  text-align center
+  font-size rem(52px)
+  margin-top 0px
+  margin-bottom $mg
+  span
+    font-weight bold
+    font-size rem(110px)
+    line-height rem(90px)
+
+p
+  font-size rem(20px)
+  line-height rem(30px)
+  text-align center
+
+.id_visual
+  background $id
+
+.light
+  background white
+
+.dark
+  background $id-dark
+  h1
+    color white
+
+.center
+  padding 0px 100px
+  text-align center
+
+.landing
+  background $id url('../img/bg_landing.png')
+  color white
+  height rem(600px)
+  position relative
+  .landing_base
+    position relative
+    background $id
+    top rem(90px)
+    z-index 996
+
+.rhombus
+  width 0
+  height 0
+  position relative
+  top 173px
+  margin 0 auto
+  border-style solid
+  border-width 50px 50px 0 50px
+  border-color #000000 transparent transparent transparent
+
+.chamada
+  background white
+  iframe
+    col(8/12, offset: 2/12)
+    width 780px
+    height 450px
+
+.itens
+  col(1/4, cycle:4)
+  text-align center
+  h3, p
+    color white
+  .circle
+    width 50px
+    height 50px
+    padding 30px
+    border 5px solid white
+    webkit-border-radius 100px
+    -moz-border-radius 100px
+    border-radius 100px
+    background $id-light
+    margin 0 auto
+
+button
+  center(300px)
+  border 4px solid white
+  background $id-light
+  width 300px
+  height 80px
+  margin-top $mg
+  h4
+    margin-top 0px
+    color white
+    @extends h1
+
+#aulas
+  h1
+    margin-bottom $mg
+    color $id-dark
+  article
+    height 320px
+    margin-bottom $mg
+    .video
+      col(6/12)
+      iframe
+        width 568px
+        height 320px
+    .texto
+      col(6/12)
+      color $id-dark
+      p
+        text-align left
+      h2
+        margin-top 0px
+      p
+        margin-top $mg
+    &:last-child
+      margin-bottom 0px
+
+#doacoes
+  h1
+    color white
+  p.center
+    padding 0px 100px
+    text-align center
+    color white
+    margin-bottom $mg
+    margin-top $mg
+
+  img
+    center(1200px)
+    margin-bottom $mg
+    &:last-child
+      margin-bottom 0px
+
+  .valores
+    col(1/3,  cycle: 3)
+    min-height 400px
+    margin-bottom $mg
+    .circle
+      width 200px
+      height 200px
+      border 5px solid white
+      webkit-border-radius 200px
+      -moz-border-radius 200px
+      border-radius 200px
+      background $id-light
+      margin 0 auto
+      h2
+        text-align center
+        font-family 'Amatic SC', cursive
+        font-size rem(60px)
+        margin-top 30px
+        color white
+    p
+      color white
+
+.instrutor
+  color $id-dark
+  img
+    col(4/12)
+  .sobre
+    col(8/12)
+    margin-top $mg
+
+footer
+  center(1200px)
+  padding $mg 0px
+  margin-bottom -100px
+  nav
+    col(3/12)
+    img
+      margin-right 20px
+
+  .realizacao
+    col(4/12, offset:5/12)
+    img
+      margin-left 50px
+      margin-top -20px
+      float right
+
+
+
+
+
+
+
+
+
+

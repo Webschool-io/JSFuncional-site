@@ -1,7 +1,7 @@
 doctype html
 html
 	head
-		title Title Site
+		title JS Funcional
 		meta(charset='UTF-8')
 		meta(http-equiv='X-UA-Compatible', content='IE=edge')
 		meta(name='description' content="meta desc")
@@ -9,9 +9,137 @@ html
 		link(rel="stylesheet", type="text/css", href="css/main.css")
 
 	body
+		div.head
+			header
+				div.logo
+					img(src='img/logo.png' alt="Logo JS Funcional")
+				div#menuArea
+					input#menuToggle(type='checkbox')
+					label.menuOpen(for='menuToggle')
+						div.open
+					div.menu.menuEffects
+						label(for='menuToggle')
+						div.menuContent
+							ul
+								li
+									a(href='#incricao') Inscrição
+								li
+									a(href='#aulas') Aulas
+								li
+									a(href='#doacoes') Doações
+								li
+									a(href='#') Redes Sociais
 
-		//- put your content here
-		img(src="img/fast-logo.png" alt="Fast")
-		h1 It Works!!
+		div.landing
+			div.landing_base
+				section.destaque
+					h1 Javascript Funcional
+						</br>
+						span Gratuito
+					p.center Esse curso irá ensinar o paradigma de programação funcional utilizando o nosso  JavaScript para isso.
+						</br> Veja mais no vídeo abaixo
+			div.rhombus
 
+		div.light
+			section.chamada
+				iframe(src='https://www.youtube.com/embed/Ea6rTAShkHs?rel=0', frameborder='0', allowfullscreen='')
+
+		div.id_visual
+			section.caracteristicas
+				div.itens
+					div.circle
+						img(src="img/modulos.png" alt="Módulos")
+					h3 MÓDULOS
+					p Módulos de 1 mês com 1 aula por semana tendo em média 1 hora cada.
+				div.itens
+					div.circle
+						img(src="img/transmissao.png", alt="Transmissão")
+					h3 TRANSMISSÃO
+					p A ferramenta utilizada será o Hangout on air ao vivo.
+				div.itens
+					div.circle
+						img(src="img/acesso.png", alt="Acesso")
+					h3 ACESSO
+					p Assista quando desejar. Os vídeos estarão disponiveis aqui mesmo e no Youtube.
+				div.itens
+					div.circle
+						img(src="img/certificado.png", alt="Certificado")
+					h3 Certificado
+					p Será emitido um certificado ao final do curso.
+
+		div.dark
+			section#inscricao
+				h1 O QUE ESTÁ ESPERANDO?
+				button
+					h4 INSCREVA-SE
+
+		div.light
+			section#aulas
+				h1 AULAS
+				article
+					div.video
+						iframe(src='https://www.youtube.com/embed/SfNpMYhZM1s?rel=0', frameborder='0', allowfullscreen='')
+					div.texto
+						h2 AULA 01
+						p Foi mais uma introdução teórica sobre programação funcional, porém na próxima aula já será bem mais mão na massa, então se você é como eu e quer ver código não perca a próxima aula!!
+				article
+					div.video
+						iframe(src='https://www.youtube.com/embed/Q1-2Jctwa-8?rel=0', frameborder='0', allowfullscreen='')
+					div.texto
+						h2 AULA 02
+						p Segunda aula do Curso JS Funcional onde abordei um pouco o conceito de Lambdas.
+				article
+					div.video
+						iframe(src='https://www.youtube.com/embed/SBPP_9GQYqg?rel=0', frameborder='0', allowfullscreen='')
+					div.texto
+						h2 AULA 03
+						p Nessa terceira aula resolvemos o exercício da aula passada e aprendemos mais sobre funções, função anônima e IIFE.
+				article
+					div.video
+						iframe(src='https://www.youtube.com/embed/zPL6WWpA__o?rel=0', frameborder='0', allowfullscreen='')
+					div.texto
+						h2 AULA 04
+						p Aula 4 do curso de JS Funcional onde abordei First-class e High-order Functions
+
+		div.id_visual
+			section#doacoes
+				h1 DOAÇÕES
+				p.center Sim você lteu certo! O curso é FREE mas como algumas pessoas me perguntaram como podiam doar para o projeto, pensei em retribuí-los de alguma forma.
+				img(src="img/seta.png", alt="")
+				div.valores
+					div.circle
+						h2 ACIMA DE R$49
+					p Quem doa acima de R$49 ganhará um adesivo do JS Funcional.
+				div.valores
+					div.circle
+						h2 ACIMA DE R$99
+					p Quem doa acima de R$99 ganhará uma camiseta do JS Funcional, porém precisa pagar o envio.
+				div.valores
+					div.circle
+						h2 ACIMA DE R$199
+					p Quem doa acima de R$199 ganhará uma camiseta do JS Funcional, porém precisa pagar o envio. E ainda poderá fazer ao vivo o Workshop de Geolocalização com MongoDB dia 29 de Julho as 19 horas.
+				p.center Para fazer sua doação, clique no botão abaixo e em seguida, escolha o valor desejado.
+				img(src="img/pagseguro.png", alt="Botão de pagamento PagSeguro")
+		div.light
+			section.instrutor
+				h1 INSTRUTOR
+				img(src="img/suissa.png", alt="Jean Carlo Suissa")
+				p.sobre Jean Carlo Nascimento é evangelista de novas tecnologias como NoSQL e Node.js as quais estão em voga atualmente por serem usadas em sistemas altamente escaláveis prontos para servir milhões de usuários; também palestra sobre Javascript, Frontend, Node.js e NoSQL. Criador dos eventos FrontinSampa e Sampa.js. Atualmente trabalha com cursos, treinamentos e consultorias voltados ao desenvolvimento de sistemas flexíveis e escaláveis com Javascript e NoSQL.
+		div.dark
+			footer#contato
+				nav
+					img(src="img/face.png", alt="Facebook JS Funcional")
+					img(src="img/twitter.png", alt="Twitter JS Funcional")
+					img(src="img/youtube.png", alt="Youtube JS Funcional")
+				div.realizacao
+					img(src="img/suissacorp.png", alt="Link para Site Suissa Corp")
+					img(src="img/webschool.png", alt="Link para Site Webschool.io")
+
+
+
+
+
+		script(type="text/javascript", src="js/jquery.min.js")
 		script(type="text/javascript", src="js/main.js")
+		//- script(type="text/javascript", src="js/classie.js")
+		//- script(type="text/javascript", src="js/demo1.js")
