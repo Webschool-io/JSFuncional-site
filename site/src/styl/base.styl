@@ -60,16 +60,34 @@ p
   border-width 50px 50px 0 50px
   border-color #000000 transparent transparent transparent
 
+  +below(1024px)
+    top 143px
+  +below(640px)
+    top 110px
+  +below(480px)
+    display none
+
+
 .chamada
   background white
   iframe
     col(8/12, offset: 2/12)
     width 780px
     height 450px
+    +below(1024px)
+      col(4/6, offset:1/6)
+    +below(480px)
+      col(1/1)
+      width 450px
+      height 253px
+
 
 .itens
   col(1/4, cycle:4)
   text-align center
+  +below(480px)
+    col(1/2, uncycle:4, cycle:2)
+    text-align center
   h3, p
     color white
   .circle
@@ -104,11 +122,17 @@ button
     margin-bottom $mg
     .video
       col(6/12)
+      +below(1024px)
+        col(3/6)
       iframe
         width 568px
         height 320px
+        +below(1024px)
+          width 100%
     .texto
       col(6/12)
+      +below(1024px)
+        col(3/6)
       color $id-dark
       p
         text-align left
@@ -116,6 +140,8 @@ button
         margin-top 0px
       p
         margin-top $mg
+        +below(480px)
+          margin-top 0px
     &:last-child
       margin-bottom 0px
 
@@ -123,22 +149,29 @@ button
   h1
     color white
   p.center
-    padding 0px 100px
+    col(3/5, offset:1/5)
     text-align center
     color white
     margin-bottom $mg
-    margin-top $mg
-
-  img
-    center(1200px)
+  .seta
+    stack()
+    width 30px
+    height 30px
     margin-bottom $mg
-    &:last-child
+  button
+    img
       margin-bottom 0px
+
 
   .valores
     col(1/3,  cycle: 3)
     min-height 400px
     margin-bottom $mg
+    +below(1024px)
+      min-height 450px
+    +below(480px)
+      stack()
+      min-height 100px
     .circle
       width 200px
       height 200px
@@ -148,12 +181,20 @@ button
       border-radius 200px
       background $id-light
       margin 0 auto
+      +below(640px)
+        width 150px
+        height 150px
+
       h2
         text-align center
         font-family 'Amatic SC', cursive
         font-size rem(60px)
         margin-top 30px
         color white
+        +below(640px)
+          font-size rem(45px)
+          margin-top 20px
+
     p
       color white
 
@@ -164,6 +205,8 @@ button
   .sobre
     col(8/12)
     margin-top $mg
+    + below(768px)
+      margin-top 0
 
 footer
   center(1200px)
@@ -173,13 +216,38 @@ footer
     col(3/12)
     img
       margin-right 20px
+    +below(1024px)
+      col(2/6)
+    +below(768px)
+      col(2/5)
+    +below(640px)
+      col(1/1)
+      margin 0px
+      text-align center
 
   .realizacao
     col(4/12, offset:5/12)
+    +below(1024px)
+      col(2/6, offset: 2/6)
+    +below(768px)
+      col(2/5, offset: 1/5)
+    +below(640px)
+      col(1/1)
+      margin 0px
+      text-align center
     img
       margin-left 50px
       margin-top -20px
-      float right
+      // float right
+      +below(1024px)
+        margin -20px 20px
+      +below(768px)
+        margin -20px 10px
+      +below(640px)
+        text-align center
+        float none
+        margin-top 30px
+
 
 
 
