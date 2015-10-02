@@ -257,6 +257,11 @@ p {
   padding: 0px 100px;
   text-align: center;
 }
+@media only screen and (max-width: 800px) {
+  .center {
+    padding: 0;
+  }
+}
 .landing {
   background: #662d91 url("../img/bg_landing.png");
   color: #fff;
@@ -307,8 +312,8 @@ p {
   width: 65.66666666666666%;
   margin-left: 17.166666666666664%;
   margin-right: 3%;
-  width: 780px;
-  height: 450px;
+  max-width: 780px;
+  min-height: 450px;
 }
 .chamada iframe:before,
 .chamada iframe:after {
@@ -356,8 +361,6 @@ p {
     width: 100%;
     margin-left: 0%;
     margin-right: 3%;
-    width: 450px;
-    height: 253px;
   }
   .chamada iframe:before,
   .chamada iframe:after {
@@ -484,6 +487,14 @@ button h4 {
   height: 320px;
   margin-bottom: 3.75rem;
 }
+#aulas article:before,
+#aulas article:after {
+  content: " ";
+  display: table;
+}
+#aulas article:after {
+  clear: both;
+}
 #aulas article .video {
   *zoom: 1;
   float: left;
@@ -517,6 +528,31 @@ button h4 {
     width: 48.5%;
     margin-left: 0%;
     margin-right: 3%;
+  }
+  #aulas article .video:before,
+  #aulas article .video:after {
+    content: '';
+    display: table;
+  }
+  #aulas article .video:after {
+    clear: both;
+  }
+  #aulas article .video:last-child {
+    margin-right: 0%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  #aulas article .video {
+    *zoom: 1;
+    float: left;
+    clear: none;
+    text-align: inherit;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+    margin-left: 0%;
+    margin-right: 3%;
+    margin-bottom: 20px;
   }
   #aulas article .video:before,
   #aulas article .video:after {
@@ -586,6 +622,31 @@ button h4 {
     margin-right: 0%;
   }
 }
+@media only screen and (max-width: 480px) {
+  #aulas article .texto {
+    *zoom: 1;
+    float: left;
+    clear: none;
+    text-align: inherit;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+    margin-left: 0%;
+    margin-right: 3%;
+    margin-bottom: 40px;
+  }
+  #aulas article .texto:before,
+  #aulas article .texto:after {
+    content: '';
+    display: table;
+  }
+  #aulas article .texto:after {
+    clear: both;
+  }
+  #aulas article .texto:last-child {
+    margin-right: 0%;
+  }
+}
 #aulas article .texto p {
   text-align: left;
 }
@@ -630,6 +691,30 @@ button h4 {
 }
 #doacoes p.center:last-child {
   margin-right: 0%;
+}
+@media only screen and (max-width: 480px) {
+  #doacoes p.center {
+    *zoom: 1;
+    float: left;
+    clear: none;
+    text-align: inherit;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+    margin-left: 0%;
+    margin-right: 3%;
+  }
+  #doacoes p.center:before,
+  #doacoes p.center:after {
+    content: '';
+    display: table;
+  }
+  #doacoes p.center:after {
+    clear: both;
+  }
+  #doacoes p.center:last-child {
+    margin-right: 0%;
+  }
 }
 #doacoes .seta {
   display: block;
@@ -781,6 +866,27 @@ button h4 {
 .instrutor img:last-child {
   margin-right: 0%;
 }
+@media only screen and (max-width: 480px) {
+  .instrutor img {
+    *zoom: 1;
+    width: auto;
+    max-width: 250px;
+    float: none;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .instrutor img:before,
+  .instrutor img:after {
+    content: '';
+    display: table;
+  }
+  .instrutor img:after {
+    clear: both;
+  }
+}
 .instrutor .sobre {
   *zoom: 1;
   float: left;
@@ -807,6 +913,30 @@ button h4 {
 @media only screen and (max-width: 768px) {
   .instrutor .sobre {
     margin-top: 0;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .instrutor .sobre {
+    *zoom: 1;
+    float: left;
+    clear: none;
+    text-align: inherit;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+    margin-left: 0%;
+    margin-right: 3%;
+  }
+  .instrutor .sobre:before,
+  .instrutor .sobre:after {
+    content: '';
+    display: table;
+  }
+  .instrutor .sobre:after {
+    clear: both;
+  }
+  .instrutor .sobre:last-child {
+    margin-right: 0%;
   }
 }
 footer {
@@ -1102,8 +1232,6 @@ input {
   border-radius: 2px;
   cursor: pointer;
   position: relative;
-  top: 55px;
-  right: 20px;
 }
 .open:before {
   content: "";
@@ -1136,12 +1264,13 @@ input {
   transition: all 0.3s ease;
 }
 .menuOpen {
+  float: right;
+  display: block;
   width: 24px;
   height: 20px;
-  display: block;
   padding: 15px;
+  margin: 50px 20px 0 0;
   cursor: pointer;
-  float: right;
 }
 .menuOpen:hover .open:before {
   top: -9px;

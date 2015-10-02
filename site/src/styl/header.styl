@@ -19,8 +19,7 @@ input
   border-radius 2px
   cursor pointer
   position relative
-  top 55px
-  right 20px
+
   &:before
     content ""
     background-color $id
@@ -45,12 +44,13 @@ input
     transition all 0.3s ease
 
 .menuOpen
+  float right
+  display block
   width 24px
   height 20px
-  display block
   padding 15px
+  margin 50px 20px 0 0
   cursor pointer
-  float right
   &:hover
     .open
       &:before

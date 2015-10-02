@@ -40,6 +40,8 @@ p
 .center
   padding 0px 100px
   text-align center
+  +below(800px)
+    padding 0
 
 .landing
   background $id url('../img/bg_landing.png')
@@ -74,15 +76,12 @@ p
   background white
   iframe
     col(8/12, offset: 2/12)
-    width 780px
-    height 450px
+    max-width 780px
+    min-height 450px
     +below(1024px)
       col(4/6, offset:1/6)
     +below(480px)
       col(1/1)
-      width 450px
-      height 253px
-
 
 .itens
   col(1/4, cycle:4)
@@ -120,12 +119,16 @@ button
     margin-bottom $mg
     color $id-dark
   article
+    clearfix()
     height 320px
     margin-bottom $mg
     .video
       col(6/12)
       +below(1024px)
         col(3/6)
+      +below(480px)
+        col(1/1)
+        margin-bottom 20px
       iframe
         width 100%
         height 320px
@@ -135,6 +138,9 @@ button
       col(6/12)
       +below(1024px)
         col(3/6)
+      +below(480px)
+        col(1/1)
+        margin-bottom 40px
       color $id-dark
       p
         text-align left
@@ -155,6 +161,8 @@ button
     text-align center
     color white
     margin-bottom $mg
+    +below(480px)
+      col(1/1)
   .seta
     stack()
     width 30px
@@ -203,13 +211,19 @@ button
 
 .instrutor
   color $id-dark
+
   img
     col(4/12)
+    +below(480px)
+      center(250px)
+
   .sobre
     col(8/12)
     margin-top $mg
     + below(768px)
       margin-top 0
+    +below(480px)
+      col(1/1)
 
 footer
   center(1200px)
@@ -250,14 +264,3 @@ footer
         text-align center
         float none
         margin-top 30px
-
-
-
-
-
-
-
-
-
-
-
